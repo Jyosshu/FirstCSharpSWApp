@@ -1,0 +1,30 @@
+﻿@using star_wars.Models;
+@model List<StarWarsCharacter>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Hello World!</h2>
+
+<table>
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Home Planet</td>
+            <td>Is Force Sensative</td>
+            <td>Is Dark Side</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(StarWarsCharacter swc in Model)
+        {
+            <tr>
+                <td>@swc.Name</td>
+                <td>@swc.HomePlanet</td>
+                <td>@swc.IsForceSensitive</td>
+                <td>@swc.IsForceSensitive</td>
+            </tr>
+        }
+    </tbody>
+</table>
